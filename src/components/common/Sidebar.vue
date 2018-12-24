@@ -41,9 +41,76 @@
                     {
                         icon: 'el-icon-lx-home',
                         index: 'dashboard',
-                        title: '系统首页'
+                        title: 'Dashboard'
                     },
                     {
+                        icon: 'el-icon-lx-people',
+                        index: '2',
+                        title: 'Trader',
+                        subs: [
+                            {
+                                index: 'order',
+                                title: 'Order'
+                            },
+                            {
+                                index: 'mobile-orders',
+                                title: 'Mobile Orders'
+                            },
+                            {
+                                index: 'buy',
+                                title: 'Buy'
+                            },
+                            {
+                                index: 'sell',
+                                title: 'Sell'
+                            }
+                        ]
+                    },
+                    {
+                        icon: 'el-icon-lx-emoji',
+                        index: 'icon',
+                        title: '自定义图标'
+                    },
+                    {
+                        icon: 'el-icon-lx-cascades',
+                        index: 'table',
+                        title: '基础表格'
+                    },
+                    {
+                        icon: 'el-icon-lx-copy',
+                        index: 'tabs',
+                        title: 'tab选项卡'
+                    },
+                    {
+                        icon: 'el-icon-lx-calendar',
+                        index: '3',
+                        title: '表单相关',
+                        subs: [
+                            {
+                                index: 'form',
+                                title: '基本表单'
+                            },
+                            {
+                                index: '3-2',
+                                title: '三级菜单',
+                                subs: [
+                                    {
+                                        index: 'editor',
+                                        title: '富文本编辑器'
+                                    },
+                                    {
+                                        index: 'markdown',
+                                        title: 'markdown编辑器'
+                                    },
+                                ]
+                            },
+                            {
+                                index: 'upload',
+                                title: '文件上传'
+                            }
+                        ]
+                    }
+                    /*{
                         icon: 'el-icon-lx-cascades',
                         index: 'table',
                         title: '基础表格'
@@ -111,7 +178,7 @@
                                 title: '404页面'
                             }
                         ]
-                    }
+                    }*/
                 ]
             }
         },
@@ -139,10 +206,10 @@
         overflow-y: scroll;
     }
     .sidebar::-webkit-scrollbar{
-        width: 0;
+        width: 0px;
     }
     .sidebar-el-menu:not(.el-menu--collapse){
-        width: 250px;
+        width: 200px;
     }
     .sidebar > ul {
         height:100%;

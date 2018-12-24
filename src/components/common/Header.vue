@@ -4,7 +4,7 @@
         <div class="collapse-btn" @click="collapseChage">
             <i class="el-icon-menu"></i>
         </div>
-        <div class="logo">后台管理系统</div>
+        <div class="logo">IBS</div>
         <div class="header-right">
             <div class="header-user-con">
                 <!-- 全屏显示 -->
@@ -48,7 +48,7 @@
     export default {
         data() {
             return {
-                collapse: false,
+                collapse: true,
                 fullscreen: false,
                 name: 'linxin',
                 message: 2
@@ -125,7 +125,7 @@
     }
     .header .logo{
         float: left;
-        width:250px;
+        width:200px;
         line-height: 70px;
     }
     .header-right{

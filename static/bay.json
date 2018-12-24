@@ -1,0 +1,46 @@
+{
+  "list":[
+      {
+          "imgURL":"../../../static/img/bank-sepa.png",
+          "name":"SEPA Bank Transfer",
+          "muted":"SEPA EU",
+          "currency":["BTC","LTC","ETH","DASH","XRP","ZEC"]
+      },
+      {
+          "imgURL":"../../../static/img/credit-card.png",
+          "name":"Debit / Credit Cards",
+          "muted":"",
+          "currency":["BTC","LTC","ETH"]
+      },
+      {
+          "imgURL":"../../../static/img/mobile.png",
+          "name":"Mobile Balance",
+          "muted":"",
+          "currency":["BTC","LTC","ETH","DASH","XRP","ZEC"]
+      },
+      {
+          "imgURL":"../../../static/img/paysec4.png",
+          "name":"QQPay",
+          "muted":"",
+          "currency":["BTC","LTC","ETH","DASH","XRP","ZEC"]
+      },
+      {
+          "imgURL":"../../../static/img/bank-paysec.png",
+          "name":"Direct Bank Transfer",
+          "muted":"China, Thailand, Indonesia, Malaysia, Vietnam",
+          "currency":["BTC","LTC","ETH","DASH","XRP","ZEC"]
+      },
+      {
+          "imgURL":"../../../static/img/skrill-logo-gradient.svg",
+          "name":"Skrill",
+          "muted":"No Verification Required!",
+          "currency":["BTC","LTC","ETH","DASH","XRP","ZEC"]
+      },
+      {
+          "imgURL":"../../../static/img/Neteller.svg",
+          "name":"Neteller",
+          "muted":"No Verification Required!",
+          "currency":["BTC","LTC","ETH","DASH","XRP","ZEC"]
+      }
+  ]
+}

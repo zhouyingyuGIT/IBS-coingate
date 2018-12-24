@@ -1,7 +1,7 @@
 <template>
     <div>
         <el-row :gutter="20">
-            <el-col :span="8">
+            <!--<el-col :span="8">
                 <el-card shadow="hover" class="mgb20" style="height:252px;">
                     <div class="user-info">
                         <img src="static/img/img.jpg" class="user-avator" alt="">
@@ -26,16 +26,16 @@
                     HTML
                     <el-progress :percentage="0.9" color="#f56c6c"></el-progress>
                 </el-card>
-            </el-col>
-            <el-col :span="16">
+            </el-col>-->
+            <el-col :span="24">
                 <el-row :gutter="20" class="mgb20">
                     <el-col :span="8">
                         <el-card shadow="hover" :body-style="{padding: '0px'}">
                             <div class="grid-content grid-con-1">
-                                <i class="el-icon-lx-people grid-con-icon"></i>
+                                <!--<i class="el-icon-lx-people grid-con-icon"></i>-->
                                 <div class="grid-cont-right">
                                     <div class="grid-num">1234</div>
-                                    <div>用户访问量</div>
+                                    <div class="grid-title">Orders Today</div>
                                 </div>
                             </div>
                         </el-card>
@@ -43,10 +43,10 @@
                     <el-col :span="8">
                         <el-card shadow="hover" :body-style="{padding: '0px'}">
                             <div class="grid-content grid-con-2">
-                                <i class="el-icon-lx-notice grid-con-icon"></i>
+                                <!--<i class="el-icon-lx-notice grid-con-icon"></i>-->
                                 <div class="grid-cont-right">
                                     <div class="grid-num">321</div>
-                                    <div>系统消息</div>
+                                    <div class="grid-title">Orders This Month</div>
                                 </div>
                             </div>
                         </el-card>
@@ -54,10 +54,10 @@
                     <el-col :span="8">
                         <el-card shadow="hover" :body-style="{padding: '0px'}">
                             <div class="grid-content grid-con-3">
-                                <i class="el-icon-lx-goods grid-con-icon"></i>
+                                <!--<i class="el-icon-lx-goods grid-con-icon"></i>-->
                                 <div class="grid-cont-right">
                                     <div class="grid-num">5000</div>
-                                    <div>数量</div>
+                                    <div class="grid-title">Orders All Time</div>
                                 </div>
                             </div>
                         </el-card>
@@ -89,7 +89,7 @@
                 </el-card>
             </el-col>
         </el-row>
-        <el-row :gutter="20">
+        <!--<el-row :gutter="20">
             <el-col :span="12">
                 <el-card shadow="hover">
                     <schart ref="bar" class="schart" canvasId="bar" :data="data" type="bar" :options="options"></schart>
@@ -100,7 +100,7 @@
                     <schart ref="line" class="schart" canvasId="line" :data="data" type="line" :options="options2"></schart>
                 </el-card>
             </el-col>
-        </el-row>
+        </el-row>-->
     </div>
 </template>
 
@@ -192,38 +192,38 @@
             }
         },
         created(){
-            this.handleListener();
-            this.changeDate();
+            // this.handleListener();
+            // this.changeDate();
         },
         activated(){
-            this.handleListener();
+            // this.handleListener();
         },
         deactivated(){
             window.removeEventListener('resize', this.renderChart);
             bus.$off('collapse', this.handleBus);
         },
         methods: {
-            changeDate(){
+            /*changeDate(){
                 const now = new Date().getTime();
                 this.data.forEach((item, index) => {
                     const date = new Date(now - (6 - index) * 86400000);
                     item.name = `${date.getFullYear()}/${date.getMonth()+1}/${date.getDate()}`
                 })
-            },
-            handleListener(){
+            },*/
+            /*handleListener(){
                 bus.$on('collapse', this.handleBus);
                 // 调用renderChart方法对图表进行重新渲染
                 window.addEventListener('resize', this.renderChart)
             },
             handleBus(msg){
-                setTimeout(() => {
+                /!*setTimeout(() => {
                     this.renderChart()
-                }, 300);
-            },
-            renderChart(){
+                }, 300);*!/
+            },*/
+            /*renderChart(){
                 this.$refs.bar.renderChart();
                 this.$refs.line.renderChart();
-            }
+            }*/
         }
     }
 
@@ -238,7 +238,7 @@
     .grid-content {
         display: flex;
         align-items: center;
-        height: 100px;
+        height: 140px;
     }
 
     .grid-cont-right {
@@ -246,11 +246,22 @@
         text-align: center;
         font-size: 14px;
         color: #999;
+        height: 100%;
     }
 
     .grid-num {
         font-size: 30px;
-        font-weight: bold;
+        font-weight: 900;
+        height: 80px;
+        line-height: 80px;
+    }
+
+    .grid-title {
+        height: 60px;
+        font-size: 16px;
+        line-height: 60px;
+        background-color: #ccc;
+        color: #fff;
     }
 
     .grid-con-icon {
@@ -266,25 +277,25 @@
         background: rgb(45, 140, 240);
     }
 
-    .grid-con-1 .grid-num {
+    /*.grid-con-1 .grid-num {
         color: rgb(45, 140, 240);
-    }
+    }*/
 
     .grid-con-2 .grid-con-icon {
         background: rgb(100, 213, 114);
     }
 
-    .grid-con-2 .grid-num {
+    /*.grid-con-2 .grid-num {
         color: rgb(45, 140, 240);
-    }
+    }*/
 
     .grid-con-3 .grid-con-icon {
         background: rgb(242, 94, 67);
     }
 
-    .grid-con-3 .grid-num {
+    /*.grid-con-3 .grid-num {
         color: rgb(242, 94, 67);
-    }
+    }*/
 
     .user-info {
         display: flex;
